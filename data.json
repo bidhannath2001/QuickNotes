@@ -4,128 +4,72 @@
             {
                 "serialNumber": 1,
                 "lecture": "Algebra",
-                "pdf": "../semester/5th/ISD/Report.pdf",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
                 "video": "https://www.youtube.com/algebra",
                 "resources": "https://www.khanacademy.org/algebra"
-            },
-            {
-                "serialNumber": 2,
-                "lecture": "Calculus [PDF]",
-                "pdf": "pdfs/mathematics101/calculus.pdf",
-                "video": "https://www.youtube.com/calculus",
-                "resources": "https://www.khanacademy.org/calculus"
             }
         ],
         "Computer Networks(CSE 3567)": [
             {
                 "serialNumber": 1,
-                "lecture": "Mechanics [PDF]",
-                "pdf": "pdfs/physics101/mechanics.pdf",
-                "video": "https://www.youtube.com/mechanics",
-                "resources": "https://www.khanacademy.org/mechanics"
-            },
-            {
-                "serialNumber": 2,
-                "lecture": "Thermodynamics [PDF]",
-                "pdf": "pdfs/physics101/thermodynamics.pdf",
-                "video": "https://www.youtube.com/thermodynamics",
-                "resources": "https://www.khanacademy.org/thermodynamics"
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
             }
         ],
         "Computer Networks Laboratory(CSE 3568)": [
             {
                 "serialNumber": 1,
-                "lecture": "Mechanics [PDF]",
-                "pdf": "pdfs/physics101/mechanics.pdf",
-                "video": "https://www.youtube.com/mechanics",
-                "resources": "https://www.khanacademy.org/mechanics"
-            },
-            {
-                "serialNumber": 2,
-                "lecture": "Thermodynamics [PDF]",
-                "pdf": "pdfs/physics101/thermodynamics.pdf",
-                "video": "https://www.youtube.com/thermodynamics",
-                "resources": "https://www.khanacademy.org/thermodynamics"
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
             }
         ],
         "Mobile Application Development(CSE 2210)": [
             {
                 "serialNumber": 1,
-                "lecture": "Mechanics [PDF]",
-                "pdf": "pdfs/physics101/mechanics.pdf",
-                "video": "https://www.youtube.com/mechanics",
-                "resources": "https://www.khanacademy.org/mechanics"
-            },
-            {
-                "serialNumber": 2,
-                "lecture": "Thermodynamics [PDF]",
-                "pdf": "pdfs/physics101/thermodynamics.pdf",
-                "video": "https://www.youtube.com/thermodynamics",
-                "resources": "https://www.khanacademy.org/thermodynamics"
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
             }
         ],
         "Operating Systems(CSE 3733)": [
             {
                 "serialNumber": 1,
-                "lecture": "Mechanics [PDF]",
-                "pdf": "pdfs/physics101/mechanics.pdf",
-                "video": "https://www.youtube.com/mechanics",
-                "resources": "https://www.khanacademy.org/mechanics"
-            },
-            {
-                "serialNumber": 2,
-                "lecture": "Thermodynamics [PDF]",
-                "pdf": "pdfs/physics101/thermodynamics.pdf",
-                "video": "https://www.youtube.com/thermodynamics",
-                "resources": "https://www.khanacademy.org/thermodynamics"
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
             }
         ],
         "Operating Systems Laboratory(CSE 3734)": [
             {
                 "serialNumber": 1,
-                "lecture": "Mechanics [PDF]",
-                "pdf": "pdfs/physics101/mechanics.pdf",
-                "video": "https://www.youtube.com/mechanics",
-                "resources": "https://www.khanacademy.org/mechanics"
-            },
-            {
-                "serialNumber": 2,
-                "lecture": "Thermodynamics [PDF]",
-                "pdf": "pdfs/physics101/thermodynamics.pdf",
-                "video": "https://www.youtube.com/thermodynamics",
-                "resources": "https://www.khanacademy.org/thermodynamics"
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
             }
         ],
         "Computer Organization & Architecture(CSE 3737)": [
             {
                 "serialNumber": 1,
-                "lecture": "Mechanics [PDF]",
-                "pdf": "pdfs/physics101/mechanics.pdf",
-                "video": "https://www.youtube.com/mechanics",
-                "resources": "https://www.khanacademy.org/mechanics"
-            },
-            {
-                "serialNumber": 2,
-                "lecture": "Thermodynamics [PDF]",
-                "pdf": "pdfs/physics101/thermodynamics.pdf",
-                "video": "https://www.youtube.com/thermodynamics",
-                "resources": "https://www.khanacademy.org/thermodynamics"
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
             }
         ],
         "Statistics and Probability(STA 2107)": [
             {
                 "serialNumber": 1,
-                "lecture": "Mechanics [PDF]",
-                "pdf": "pdfs/physics101/mechanics.pdf",
-                "video": "https://www.youtube.com/mechanics",
-                "resources": "https://www.khanacademy.org/mechanics"
-            },
-            {
-                "serialNumber": 2,
-                "lecture": "Thermodynamics [PDF]",
-                "pdf": "pdfs/physics101/thermodynamics.pdf",
-                "video": "https://www.youtube.com/thermodynamics",
-                "resources": "https://www.khanacademy.org/thermodynamics"
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
             }
         ]
     }
