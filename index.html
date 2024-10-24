@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNotes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>QuickNotes</h1>
+    </header>
+
+    <main>
+        <section id="semester-selection">
+            <h2>Select Your Semester</h2>
+            <select id="semester-dropdown">
+                <option value="" disabled selected>Choose your semester</option>
+            </select>
+        </section>
+
+        <section id="subject-selection" style="display: none;">
+            <h2>Select Your Subject</h2>
+            <select id="subject-dropdown">
+                </select>
+        </section>
+
+        <section id="lecture-selection" style="display: none;">
+            <h2>Available Lectures</h2>
+            <table id="lecture-table">
+                <thead>
+                    <tr>
+                        <th>Lecture</th>
+                        <th>Topic</th>
+                        <th>Video</th>
+                        <th>Online Resources</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+
+        <section id="pdf-section" style="display: none;">
+            <h2>View and Download Lecture PDF</h2>
+            <button id="close-pdf-viewer">Close</button>
+            <iframe id="pdf-viewer" class="pdf-viewer" src="" type="application/pdf"></iframe>
+            <div class="button-container">
+                <a id="download-button" href="" download>Download PDF</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

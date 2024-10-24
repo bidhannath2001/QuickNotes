@@ -1,0 +1,132 @@
+{
+    "5th": {
+        "Information System Design(CSE 3211)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Algebra",
+                "pdf": "../semester/4th/Biology/Report.pdf",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
+            },
+            {
+                "serialNumber": 2,
+                "lecture": "Calculus [PDF]",
+                "pdf": "pdfs/mathematics101/calculus.pdf",
+                "video": "https://www.youtube.com/calculus",
+                "resources": "https://www.khanacademy.org/calculus"
+            }
+        ],
+        "Computer Networks(CSE 3567)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Mechanics [PDF]",
+                "pdf": "pdfs/physics101/mechanics.pdf",
+                "video": "https://www.youtube.com/mechanics",
+                "resources": "https://www.khanacademy.org/mechanics"
+            },
+            {
+                "serialNumber": 2,
+                "lecture": "Thermodynamics [PDF]",
+                "pdf": "pdfs/physics101/thermodynamics.pdf",
+                "video": "https://www.youtube.com/thermodynamics",
+                "resources": "https://www.khanacademy.org/thermodynamics"
+            }
+        ],
+        "Computer Networks Laboratory(CSE 3568)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Mechanics [PDF]",
+                "pdf": "pdfs/physics101/mechanics.pdf",
+                "video": "https://www.youtube.com/mechanics",
+                "resources": "https://www.khanacademy.org/mechanics"
+            },
+            {
+                "serialNumber": 2,
+                "lecture": "Thermodynamics [PDF]",
+                "pdf": "pdfs/physics101/thermodynamics.pdf",
+                "video": "https://www.youtube.com/thermodynamics",
+                "resources": "https://www.khanacademy.org/thermodynamics"
+            }
+        ],
+        "Mobile Application Development(CSE 2210)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Mechanics [PDF]",
+                "pdf": "pdfs/physics101/mechanics.pdf",
+                "video": "https://www.youtube.com/mechanics",
+                "resources": "https://www.khanacademy.org/mechanics"
+            },
+            {
+                "serialNumber": 2,
+                "lecture": "Thermodynamics [PDF]",
+                "pdf": "pdfs/physics101/thermodynamics.pdf",
+                "video": "https://www.youtube.com/thermodynamics",
+                "resources": "https://www.khanacademy.org/thermodynamics"
+            }
+        ],
+        "Operating Systems(CSE 3733)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Mechanics [PDF]",
+                "pdf": "pdfs/physics101/mechanics.pdf",
+                "video": "https://www.youtube.com/mechanics",
+                "resources": "https://www.khanacademy.org/mechanics"
+            },
+            {
+                "serialNumber": 2,
+                "lecture": "Thermodynamics [PDF]",
+                "pdf": "pdfs/physics101/thermodynamics.pdf",
+                "video": "https://www.youtube.com/thermodynamics",
+                "resources": "https://www.khanacademy.org/thermodynamics"
+            }
+        ],
+        "Operating Systems Laboratory(CSE 3734)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Mechanics [PDF]",
+                "pdf": "pdfs/physics101/mechanics.pdf",
+                "video": "https://www.youtube.com/mechanics",
+                "resources": "https://www.khanacademy.org/mechanics"
+            },
+            {
+                "serialNumber": 2,
+                "lecture": "Thermodynamics [PDF]",
+                "pdf": "pdfs/physics101/thermodynamics.pdf",
+                "video": "https://www.youtube.com/thermodynamics",
+                "resources": "https://www.khanacademy.org/thermodynamics"
+            }
+        ],
+        "Computer Organization & Architecture(CSE 3737)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Mechanics [PDF]",
+                "pdf": "pdfs/physics101/mechanics.pdf",
+                "video": "https://www.youtube.com/mechanics",
+                "resources": "https://www.khanacademy.org/mechanics"
+            },
+            {
+                "serialNumber": 2,
+                "lecture": "Thermodynamics [PDF]",
+                "pdf": "pdfs/physics101/thermodynamics.pdf",
+                "video": "https://www.youtube.com/thermodynamics",
+                "resources": "https://www.khanacademy.org/thermodynamics"
+            }
+        ],
+        "Statistics and Probability(STA 2107)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Mechanics [PDF]",
+                "pdf": "pdfs/physics101/mechanics.pdf",
+                "video": "https://www.youtube.com/mechanics",
+                "resources": "https://www.khanacademy.org/mechanics"
+            },
+            {
+                "serialNumber": 2,
+                "lecture": "Thermodynamics [PDF]",
+                "pdf": "pdfs/physics101/thermodynamics.pdf",
+                "video": "https://www.youtube.com/thermodynamics",
+                "resources": "https://www.khanacademy.org/thermodynamics"
+            }
+        ]
+    }
+}
