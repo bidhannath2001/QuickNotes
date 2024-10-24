@@ -6,7 +6,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const pdfViewer = document.getElementById('pdf-viewer');
     const downloadButton = document.getElementById('download-button');
     const closePdfViewerButton = document.getElementById('close-pdf-viewer');
+    const menuButton = document.getElementById('menu-button');
+    const menu = document.getElementById('menu');
 
+    // Function to toggle menu visibility
+    menuButton.addEventListener('click', function(event) {
+        event.stopPropagation(); 
+        menu.classList.toggle('hidden'); 
+        menu.style.display = menu.classList.contains('hidden') ? 'none' : 'block'; 
+    });
+
+    // Close menu when clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!menuButton.contains(event.target) && !menu.contains(event.target)) {
+            menu.classList.add('hidden'); 
+            menu.style.display = 'none';
+        }
+    });
+    
     let semesterSubjects = {};
 
     // Load JSON data
@@ -60,79 +77,78 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Populate lecture table based on subject
-function populateLectures(semester, subject) {
-    lectureTableBody.innerHTML = '';
-    semesterSubjects[semester][subject].forEach(lectureData => {
-        const row = document.createElement('tr');
+    function populateLectures(semester, subject) {
+        lectureTableBody.innerHTML = '';
+        semesterSubjects[semester][subject].forEach(lectureData => {
+            const row = document.createElement('tr');
 
-        // Serial Number column
-        const serialCell = document.createElement('td');
-        serialCell.textContent = lectureData.serialNumber;
-        row.appendChild(serialCell);
+            // Serial Number column
+            const serialCell = document.createElement('td');
+            serialCell.textContent = lectureData.serialNumber;
+            row.appendChild(serialCell);
 
-        // PDF column with clickable lecture name
-        const pdfCell = document.createElement('td');
-        const pdfLink = document.createElement('a');
-        pdfLink.href = '#';
-        pdfLink.textContent = lectureData.lecture;
-        pdfLink.setAttribute('data-pdf', lectureData.pdf); // Store PDF link in data attribute
-        pdfLink.classList.add('pdf-link');
-        pdfCell.appendChild(pdfLink);
+            // PDF column with clickable lecture name
+            const pdfCell = document.createElement('td');
+            const pdfLink = document.createElement('a');
+            pdfLink.href = '#';
+            pdfLink.textContent = lectureData.lecture;
+            pdfLink.setAttribute('data-pdf', lectureData.pdf); // Store PDF link in data attribute
+            pdfLink.classList.add('pdf-link');
+            pdfCell.appendChild(pdfLink);
 
-        // Video column
-        const videoCell = document.createElement('td');
-        const videoLink = document.createElement('a');
-        videoLink.href = lectureData.video;
-        videoLink.textContent = 'Watch Video';
-        videoLink.target = '_blank';
-        videoCell.appendChild(videoLink);
+            // Video column
+            const videoCell = document.createElement('td');
+            const videoLink = document.createElement('a');
+            videoLink.href = lectureData.video;
+            videoLink.textContent = 'Watch Video';
+            videoLink.target = '_blank';
+            videoCell.appendChild(videoLink);
 
-        // Online resources column
-        const resourceCell = document.createElement('td');
-        const resourceLink = document.createElement('a');
-        resourceLink.href = lectureData.resources;
-        resourceLink.textContent = 'View Resources';
-        resourceLink.target = '_blank';
-        resourceCell.appendChild(resourceLink);
+            // Online resources column
+            const resourceCell = document.createElement('td');
+            const resourceLink = document.createElement('a');
+            resourceLink.href = lectureData.resources;
+            resourceLink.textContent = 'View Resources';
+            resourceLink.target = '_blank';
+            resourceCell.appendChild(resourceLink);
 
-        // Download button column
-        const downloadCell = document.createElement('td');
-        const downloadBtn = document.createElement('a');
-        downloadBtn.href = lectureData.pdf; // Correct link for download
-        downloadBtn.textContent = 'Download PDF';
-        downloadBtn.setAttribute('download', ''); // This attribute is important for the download to work
-        downloadBtn.classList.add('download-btn');
-        downloadCell.appendChild(downloadBtn);
+            // Download button column
+            const downloadCell = document.createElement('td');
+            const downloadBtn = document.createElement('a');
+            downloadBtn.href = lectureData.pdf; // Correct link for download
+            downloadBtn.textContent = 'Download PDF';
+            downloadBtn.setAttribute('download', ''); // This attribute is important for the download to work
+            downloadBtn.classList.add('download-btn');
+            downloadCell.appendChild(downloadBtn);
 
-        // Append cells to the row
-        row.appendChild(serialCell);
-        row.appendChild(pdfCell);
-        row.appendChild(videoCell);
-        row.appendChild(resourceCell);
-        row.appendChild(downloadCell);
+            // Append cells to the row
+            row.appendChild(serialCell);
+            row.appendChild(pdfCell);
+            row.appendChild(videoCell);
+            row.appendChild(resourceCell);
+            row.appendChild(downloadCell);
 
-        // Append the row to the table body
-        lectureTableBody.appendChild(row);
-    });
-
-    // Handle PDF link click to show in iframe
-    document.querySelectorAll('.pdf-link').forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            const pdfUrl = this.getAttribute('data-pdf'); // Get PDF URL from data attribute
-            if (pdfUrl) {
-                pdfViewer.src = pdfUrl; // Set the source of the iframe to display the PDF
-                downloadButton.href = pdfUrl; // Update the download button to the same URL
-                pdfSection.style.display = 'block'; // Show the PDF section with the iframe
-            }
+            // Append the row to the table body
+            lectureTableBody.appendChild(row);
         });
+
+        // Handle PDF link click to show in iframe
+        document.querySelectorAll('.pdf-link').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const pdfUrl = this.getAttribute('data-pdf'); // Get PDF URL from data attribute
+                if (pdfUrl) {
+                    pdfViewer.src = pdfUrl; // Set the source of the iframe to display the PDF
+                    downloadButton.href = pdfUrl; // Update the download button to the same URL
+                    pdfSection.style.display = 'block'; // Show the PDF section with the iframe
+                }
+            });
+        });
+    }
+
+    // Close the PDF viewer
+    closePdfViewerButton.addEventListener('click', function () {
+        pdfSection.style.display = 'none'; // Hide the PDF section
+        pdfViewer.src = ''; // Reset the iframe
     });
-}
-
-// Close the PDF viewer
-closePdfViewerButton.addEventListener('click', function() {
-    pdfSection.style.display = 'none'; // Hide the PDF section
-    pdfViewer.src = ''; // Reset the iframe
-});
-
 });
