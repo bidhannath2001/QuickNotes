@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Cover Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="coverpage.css">
+    <style>
+        
+    </style>
+    
+</head>
+
+<body class="bg-light">
+
+    <div class="container my-4" id="inputForm">
+        <h2 class="text-center">Assignment Cover Page Input</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Course Name</label>
+                    <input type="text" class="form-control" id="courseName">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Course Code</label>
+                    <input type="text" class="form-control" id="courseCode">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Assignment Name</label>
+                    <input type="text" class="form-control" id="assignmentName">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Assignment No</label>
+                    <input type="text" class="form-control" id="assignmentNo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Submission Date</label>
+                <input type="date" class="form-control" id="submissionDate">
+            </div>
+
+            <h3>Submitted To</h3>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="submittedToName">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Designation</label>
+                    <input type="text" class="form-control" id="submittedToDesignation">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Department</label>
+                    <input type="text" class="form-control" id="submittedToDept">
+                </div>
+            </div>
+
+            <h3>Submitted By</h3>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="submittedByName">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>ID</label>
+                    <input type="text" class="form-control" id="submittedByID">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Semester</label>
+                    <input type="text" class="form-control" id="submittedBySemester">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Batch</label>
+                    <input type="text" class="form-control" id="submittedByBatch">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Session</label>
+                    <input type="text" class="form-control" id="submittedBySession">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Section</label>
+                    <input type="text" class="form-control" id="submittedBySection">
+                </div>
+            </div>
+            <div class="text-center my-3">
+                <button type="button" class="btn btn-primary" onclick="generateCoverPage()">Generate Cover Page</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container d-none my-5" id="coverPage">
+        <div class="a4-page">
+            <div class="text-center">
+                <h1>PREMIER UNIVERSITY CHITTAGONG</h1>
+                <h4>Department of Computer Science & Engineering</h4>
+            </div>
+            <div class="logo text-center">
+                <img src="puc.png" alt="logo">
+            </div>
+            <div class="assignment-title">Assignment</div>
+
+            <table class="table content-table">
+                <tbody>
+                    <tr>
+                        <td>Course Name:</td>
+                        <td id="displayCourseName"></td>
+                    </tr>
+                    <tr>
+                        <td>Course Code:</td>
+                        <td id="displayCourseCode"></td>
+                    </tr>
+                    <tr>
+                        <td>Assignment Name:</td>
+                        <td id="displayAssignmentName"></td>
+                    </tr>
+                    <tr>
+                        <td>Assignment No:</td>
+                        <td id="displayAssignmentNo"></td>
+                    </tr>
+                    <tr>
+                        <td>Submission Date:</td>
+                        <td id="displaySubmissionDate"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5>Submitted To</h5>
+            <table class="table content-table">
+                <tbody>
+                    <tr>
+                        <td>Name:</td>
+                        <td id="displaySubmittedToName"></td>
+                    </tr>
+                    <tr>
+                        <td>Designation:</td>
+                        <td id="displaySubmittedToDesignation"></td>
+                    </tr>
+                    <tr>
+                        <td>Department:</td>
+                        <td id="displaySubmittedToDept"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5>Submitted By</h5>
+            <table class="table content-table">
+                <tbody>
+                    <tr>
+                        <td>Name:</td>
+                        <td id="displaySubmittedByName"></td>
+                    </tr>
+                    <tr>
+                        <td>ID:</td>
+                        <td id="displaySubmittedByID"></td>
+                    </tr>
+                    <tr>
+                        <td>Semester:</td>
+                        <td id="displaySubmittedBySemester"></td>
+                    </tr>
+                    <tr>
+                        <td>Batch:</td>
+                        <td id="displaySubmittedByBatch"></td>
+                    </tr>
+                    <tr>
+                        <td>Session:</td>
+                        <td id="displaySubmittedBySession"></td>
+                    </tr>
+                    <tr>
+                        <td>Section:</td>
+                        <td id="displaySubmittedBySection"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="remark"><strong>Remark:</strong>
+        </div>
+    </div>
+
+    <div class="text-center my-3 button-container d-none">
+        <button class="btn btn-secondary" onclick="editCoverPage()">Edit</button>
+        <button class="btn btn-success" onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="coverpage.js">
+    </script>
+</body>
+</html>

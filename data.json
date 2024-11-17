@@ -1,0 +1,80 @@
+{
+    "5th": {
+        "Mobile Application Development(CSE 2210)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Sensors",
+                "pdf": "https://drive.google.com/file/d/19NL5NAL9DyBRzS0pkYIfinL_y8yoT7ln/preview",
+                "handNotes": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/embed/CzRQ9mnmh44?si=dRTkvO_cRpDYjENi",
+                "resources": "https://www.khanacademy.org/algebra"
+            } 
+        ],
+        "Information System Design(CSE 3211)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Introduction",
+                "pdf": "https://drive.google.com/file/d/1nc_wPGMR2h4Iuz-UJnxNxG33ynIOOvlJ/preview",
+                "handNotes": "...",
+                "video": "https://www.youtube.com/embed/kuy3lj2zGfI?si=63TZp5ZNaeHFsqUP",
+                "resources": "..."
+            }
+        ],
+        "Artificial Intelligence(CSE 3317)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "handNotes": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
+            }
+        ],
+        "Artificial Intelligence Laboratory(CSE 3318)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "handNotes": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
+            }
+        ],
+        "Operating Systems(CSE 3733)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
+            }
+        ],
+        "Operating Systems Laboratory(CSE 3734)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
+            }
+        ],
+        "Computer Organization & Architecture(CSE 3737)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
+            }
+        ],
+        "Statistics and Probability(STA 2107)": [
+            {
+                "serialNumber": 1,
+                "lecture": "Algebra",
+                "pdf": "https://drive.google.com/file/d/1li00QbLv8sbjs4iT2q8iTPTSa0jqHPjg/preview",
+                "video": "https://www.youtube.com/algebra",
+                "resources": "https://www.khanacademy.org/algebra"
+            }
+        ]
+    }
+}

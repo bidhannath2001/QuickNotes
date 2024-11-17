@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="upcomingEvents.css">
+    <title>Upcoming Events</title>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="name">QuickNotes</h1>
+    </header>
+    <div class="container">
+        <h1>Upcoming Events</h1>
+        <table id="eventsTable">
+            <thead>
+                <tr>
+                    <th class="sortable" data-sort="name" style="cursor: pointer;">
+                        Event Name <span class="sort-symbol" data-sort-direction="asc">▲</span>
+                    </th>
+                    <th class="sortable" data-sort="date" style="cursor: pointer;">
+                        Date & Time <span class="sort-symbol" data-sort-direction="asc">▲</span>
+                    </th>
+                    <th>Remaining Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Team Meeting</td>
+                    <td>2024-11-01 10:00 AM</td>
+                    <td class="remaining-time"></td>
+                </tr>
+                <tr>
+                    <td>Project Deadline</td>
+                    <td>2024-11-15 5:00 PM</td>
+                    <td class="remaining-time"></td>
+                </tr>
+                <tr>
+                    <td>Conference</td>
+                    <td>2024-12-05 9:00 AM</td>
+                    <td class="remaining-time"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="upcomingEvents.js"></script>
+</body>
+</html>
