@@ -176,7 +176,7 @@ button#close-pdf-viewer {
     }
 
     button {
-        width: 100%;
+        width: auto;
         font-size: 14px;
     }
 }
