@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Populate lecture table based on subject
     function populateLectures(semester, subject) {
         lectureTableBody.innerHTML = '';
+
         semesterSubjects[semester][subject].forEach(lectureData => {
             const row = document.createElement('tr');
 
@@ -89,84 +90,80 @@ document.addEventListener('DOMContentLoaded', function () {
             serialCell.textContent = lectureData.serialNumber;
             row.appendChild(serialCell);
 
-            // PDF column with clickable lecture name
-            const pdfCell = document.createElement('td');
-            const pdfLink = document.createElement('a');
-            pdfLink.href = '#';
-            pdfLink.textContent = lectureData.lecture;
-            pdfLink.setAttribute('data-pdf', lectureData.pdf);
-            pdfLink.classList.add('pdf-link');
-            pdfCell.appendChild(pdfLink);
+            // Lecture column
+            const lectureCell = document.createElement('td');
+            lectureCell.textContent = lectureData.lecture;
+            lectureCell.style.color = 'green';
+            row.appendChild(lectureCell);
 
-            // HandNotes
+            // PDF column
+            const pdfCell = document.createElement('td');
+            lectureData.pdf.forEach(pdfUrl => {
+                const pdfLink = document.createElement('a');
+                pdfLink.href = '#';
+                pdfLink.innerHTML = '<i class="bx bxs-file-pdf" style="font-size: 25px; color: red;"></i>';
+                pdfLink.setAttribute('data-pdf', pdfUrl);
+                pdfLink.classList.add('pdf-link');
+                pdfLink.style.marginRight = '10px';
+                pdfCell.appendChild(pdfLink);
+            });
+            row.appendChild(pdfCell);
+
+            // HandNotes column
             const handNotesCell = document.createElement('td');
-            const handNotesLink = document.createElement('a');
-            handNotesLink.href = lectureData.handNotes;
-            handNotesLink.innerHTML = '<i class="bx bxs-book" style="color: green; font-size: 30px;"></i>';
-            handNotesLink.target = '_blank';
-            handNotesCell.appendChild(handNotesLink);
+            lectureData.handNotes.forEach(noteUrl => {
+                const handNoteLink = document.createElement('a');
+                handNoteLink.href = noteUrl;
+                handNoteLink.innerHTML = '<i class="bx bx-note" style="font-size: 25px; color: green;"></i>';
+                handNoteLink.target = '_blank';
+                handNotesCell.appendChild(handNoteLink);
+            });
+            row.appendChild(handNotesCell);
 
             // Video column
             const videoCell = document.createElement('td');
-            const videoLink = document.createElement('a');
-            videoLink.href = '#';
-            videoLink.setAttribute('data-video', lectureData.video);
-            videoLink.innerHTML = '<i class="bx bxl-youtube" style="color: red; font-size: 30px;"></i>';
-            videoLink.classList.add('video-link');
-            videoCell.appendChild(videoLink);
-
-            // Online resources column
-            const resourceCell = document.createElement('td');
-            const resourceLink = document.createElement('a');
-            resourceLink.href = lectureData.resources;
-            resourceLink.innerHTML = '<i class="bx bx-book-open" style="font-size: 30px;"></i>';
-            resourceLink.target = '_blank';
-            resourceCell.appendChild(resourceLink);
-
-            // Download button column
-            const downloadCell = document.createElement('td');
-            const downloadBtn = document.createElement('a');
-            downloadBtn.href = convertToDownloadLink(lectureData.pdf); // Convert preview link to download link
-            downloadBtn.innerHTML = '<i class="bx bxs-download" style="font-size: 30px;"></i>';
-            downloadBtn.setAttribute('download', 'Lecture.pdf'); // Set default name for download
-            downloadBtn.classList.add('download-btn');
-            downloadCell.appendChild(downloadBtn);
-
-            // Append cells to the row
-            row.appendChild(serialCell);
-            row.appendChild(pdfCell);
-            row.appendChild(handNotesCell);
+            lectureData.video.forEach(videoUrl => {
+                const videoLink = document.createElement('a');
+                videoLink.href = '#';
+                videoLink.innerHTML = '<i class="bx bxl-youtube" style="font-size: 25px; color: red;"></i>';
+                videoLink.setAttribute('data-video', videoUrl);
+                videoLink.classList.add('video-link');
+                videoCell.appendChild(videoLink);
+            });
             row.appendChild(videoCell);
-            row.appendChild(resourceCell);
-            row.appendChild(downloadCell);
 
-            // Append the row to the table body
+            // Resources column
+            const resourceCell = document.createElement('td');
+            lectureData.resources.forEach(resourceUrl => {
+                const resourceLink = document.createElement('a');
+                resourceLink.href = resourceUrl;
+                resourceLink.innerHTML = '<i class="bx bx-book-bookmark" style="font-size: 25px;"></i>';
+                resourceLink.target = '_blank';
+                resourceCell.appendChild(resourceLink);
+            });
+            row.appendChild(resourceCell);
+
+            // Append the row to the table
             lectureTableBody.appendChild(row);
         });
 
-        // Handle PDF link click to show in iframe
+        // Handle PDF linksa
         document.querySelectorAll('.pdf-link').forEach(link => {
             link.addEventListener('click', function (event) {
                 event.preventDefault();
                 const pdfPreviewUrl = this.getAttribute('data-pdf');
-                const pdfDownloadUrl = convertToDownloadLink(pdfPreviewUrl); 
+                const pdfDownloadUrl = convertToDownloadLink(pdfPreviewUrl);
                 if (pdfPreviewUrl) {
-                    pdfViewer.src = pdfPreviewUrl;           
-                    downloadButton.href = pdfDownloadUrl;    
-                    pdfSection.style.display = 'block';      
-                    videoSection.style.display = 'none';    
-                    pdfSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to PDF section
+                    pdfViewer.src = pdfPreviewUrl;
+                    downloadButton.href = pdfDownloadUrl;
+                    pdfSection.style.display = 'block';
+                    videoSection.style.display = 'none';
+                    pdfSection.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
 
-        // Function to convert Google Drive preview link to download link
-        function convertToDownloadLink(previewUrl) {
-            const fileIdMatch = previewUrl.match(/\/d\/(.+?)\//); // Extract file ID from preview link
-            return fileIdMatch ? `https://drive.google.com/uc?export=download&id=${fileIdMatch[1]}` : previewUrl;
-        }
-
-        // Handle Video link click to show in iframe
+        // Handle Video links
         document.querySelectorAll('.video-link').forEach(link => {
             link.addEventListener('click', function (event) {
                 event.preventDefault();
@@ -179,6 +176,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         });
+
+        // Function to convert Google Drive preview link to download link
+        function convertToDownloadLink(previewUrl) {
+            const fileIdMatch = previewUrl.match(/\/d\/(.+?)\//);
+            return fileIdMatch ? `https://drive.google.com/uc?export=download&id=${fileIdMatch[1]}` : previewUrl;
+        }
     }
 
     // Close the PDF viewer
