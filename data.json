@@ -3,11 +3,12 @@
         "Mobile Application Development(CSE 2210)": [
         {
           "serialNumber": 1,
-          "lecture": "Sensors",
+          "lecture": "Kotlin Basic",
           "pdf": [],
           "handNotes": [],
           "video": [],
-          "resources": []
+          "resources": ["https://kotlinlang.org/docs/home.html",
+          "https://developer.android.com/get-started/overview"]
         }
       ],
         "Information System Design(CSE 3211)": [
@@ -30,9 +31,17 @@
                 
             }
         ],
+        
         "Operating Systems(CSE 3733)": [
             {
-                
+                "serialNumber": 1,
+                "lecture": "Introduction",
+                "pdf": ["https://drive.google.com/file/d/1KWLNh4TIvEHaDWO9wM35dfzOQfxGvA4I/preview"],
+                "handNotes": ["..."],
+                "video": ["https://www.youtube.com/embed/vBURTt97EkA?si=UYaE9dz0rKwucQd6",
+                            "https://www.youtube.com/embed/VjPgYcQqqN0?si=CrJlkHizpQB0p4wS",
+                            "https://www.youtube.com/embed/So9SR3qpWsM?si=BqMwDOPW2kfcySuH"],
+                "resources": ["https://www.geeksforgeeks.org/introduction-of-operating-system-set-1/"]
             }
         ],
         "Operating Systems Laboratory(CSE 3734)": [
