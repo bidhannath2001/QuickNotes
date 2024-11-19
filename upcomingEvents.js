@@ -1,7 +1,6 @@
 const events = [
-    { name: "Team Meeting", date: "2024-11-01T10:00:00" },
-    { name: "Project Deadline", date: "2024-11-15T17:00:00" },
-    { name: "Conference", date: "2024-12-05T09:00:00" }
+    { name: "Linux Installation", date: "2024-11-24T08:30:00" },
+    { name: "Project Deadline", date: "2024-11-26T14:30:00" }
 ];
 
 // Current sort direction
